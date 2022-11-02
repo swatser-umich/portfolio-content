@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBKB2TTXDW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CBKB2TTXDW');
+</script>
+
 <body>
 
 <main>
@@ -44,6 +54,22 @@
     <img src="images/contact/phandalin.png" alt="Settlement with few buildings made from bricks">
     <img src="images/contact/neverwinter.jpeg" alt="Port city with a stone castle on top of a cliff">
     <img src="images/contact/sendingspell.jpeg" alt="Spell scroll glowing with magical power">
+
+    <form
+        action="https://formspree.io/f/xrgdorbv"
+        method="POST"
+    >
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
 
     <footer>
     </footer>
