@@ -1,3 +1,4 @@
+/*header components*/
 header {
     grid-row: 1;
     font-weight: bold;
@@ -8,15 +9,16 @@ header {
     color: white;
     display: inline-grid;
     gap: 10px 50px;
-    grid-template-columns: 5px 1fr 2fr 5px;
+    grid-template-columns: 10px 1fr 2fr 10px;
     grid-template-rows: auto auto;
     justify-items: stretch;
     align-items: center;
     padding-bottom: 30px;
 }
 
+/*logo components*/
 #logo {
-    width: 30vw;
+    width: 150px;
     height: auto;
     grid-column: 2 / 2;
     justify-items: end;
@@ -27,7 +29,7 @@ header {
 }
 
 #logoname {
-    font-size: 10vw;
+    font-size: 60px;
     color: white;
     grid-column: 3 / 4;
     justify-items: center;
@@ -36,32 +38,42 @@ header {
     animation-duration: 2s;
 }
 
+/*navigation components*/
 .nav_links {
     margin-bottom: 20px;
     font-size: x-large;
     text-align: center;
-    margin: 10px 10px 10px 10px;
-    border: 2px solid white;
+    margin: 10px;
+    border: 2px solid rgba(255,255,255,0.5);
     background-color: #68750F;
     border-radius: 5px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     grid-column-start: 2;
     grid-column-end: 4;
-    align-items: start;
-
-}
-
-.nav_item li a {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav_item {
-    font-size: 10vw;
+    font-size: x-large;
     color: white;
     text-decoration: none;
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+i {
+    width: 5vw;
+}
+
+/*animation components*/
 @keyframes logo {
     0% {
         opacity: 0;
@@ -76,16 +88,16 @@ header {
     }
 }
 
-
+/*a link components*/
 a:link {
     color: white;
     text-decoration: none;
+    transition: 0.5s ease;
 }
 
 a:hover {
     text-decoration: underline;
     color: #822325;
-
 }
 
 a:visited {
@@ -98,14 +110,17 @@ a:active {
     color: #822325;
 }
 
+/*Body Components*/
 body {
     background-color: #68750F;
     color: #822325;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
+    font-family: "Playfair Display", serif;
 }
 
+/*Main Components*/
 main {
     grid-row: 2;
     display: grid;
@@ -113,22 +128,27 @@ main {
     grid-template-rows: auto auto auto auto;
     grid-gap: 30px;
     padding: 15px;
-    font-family: "Playfair Display", serif;
 }
 
+/*Aside Components*/
 aside {
     grid-row: 3;
     background-color: #363534;
     width: auto;
     color: white;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: medium;
     font-family: "Cinzel", serif;
+    padding: 20px 0;
 }
 
 .aside_icon {
     width: 40vw;
+    height: auto;
 }
 
 aside figcaption {
@@ -140,6 +160,7 @@ aside title {
     font-size: large;
 }
 
+/*footer components*/
 footer {
     grid-row: 4;
     display: grid;
@@ -151,6 +172,7 @@ footer {
     background-repeat: no-repeat;
     height: 175px;
     align-items: center;
+    justify-items: center;
 }
 
 .footer_dnd {
@@ -170,70 +192,15 @@ footer {
     color: white;
 }
 
-.disclaimer #title {
+.disclaimer .title {
     font-size: medium;
 }
 
-.disclaimer #body {
+.disclaimer .body {
     font-size: small;
 }
 
-.team_main {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-gap: 30px;
-    padding: 15px;
-    font-family: "Playfair Display", serif;
-}
-
-#team_bio #crofoot {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: 1;
-}
-
-#team_bio #iroh {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 2;
-}
-
-#team_bio #kathra {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
-#team_bio #lilwyvern {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 4;
-    grid-row-end: 4;
-}
-
-#team_bio #silas {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-#team_card {
-    grid-row: 1;
-}
-
-#mission_card {
-    grid-row: 2;
-}
-
-#contact_card {
-    grid-row: 3;
-}
-
+/*Cards Elements*/
 .card {
     display: grid;
     grid-template-columns: 10px repeat(3, auto) 10px;
@@ -242,11 +209,12 @@ footer {
     background-color: rgba(245, 237, 156, .75);
     border-radius: 10px;
     padding: .5rem;
+    box-shadow: 3px 3px 3px 1px #000000;
 }
 
-#card_title {
+h1 {
     font-weight: bold;
-    font-size: 6vw;
+    font-size: 35px;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -255,32 +223,15 @@ footer {
     padding-bottom: 5px;
 }
 
-#card_body {
+p {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3;
+    font-size: 15px;
 }
 
-#contact_form #card_title {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-#contact_form #card_body {
-    padding-left: 10px;
-}
-
-#urgency_card #card_title {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-#urgency_card #card_body {
-    padding-left: 10px;
-}
-
-#card_img {
+.card_img {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 4;
@@ -291,51 +242,27 @@ footer {
     height: auto;
 }
 
-#h1 {
-    font-weight: bold;
-    font-size: large;
-}
-
-.minor_card {
+.flex_card {
+    grid-row-start: 2;
+    grid-row-end: 2;
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    padding-left: 10px;
-}
-
-.major_card {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    padding-left: 10px;
-}
-
-.critical_card {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 6;
-    padding-left: 10px;
-}
-
-ul #urgency_card {
-    list-style-type: circle;
-    padding-left: 30px;
-}
-
-.figure_box {
     display: flex;
-    flex-flow: column;
-    padding: 5px;
-    margin: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 figcaption {
     font-style: italic;
     font-size: small;
-    padding-left: 10px;
+    /*padding-left: 5px;*/
 }
 
 .img_fig {
@@ -351,6 +278,7 @@ figcaption {
 img {
     margin: 5px;
     border-radius: 5px;
+    transition: all 0.75s ease;
 }
 
 button {
@@ -377,22 +305,27 @@ button:hover {
     opacity: .85;
 }
 
+/*Form Elements*/
 #contact_form {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto;
 }
 
-form {
-    justify-self: center;
+#contact_form .flex_card {
+    padding: 10px;
 }
 
-#contact_form #card_title {
+form {
+    align-self: center;
+}
+
+#contact_form .card_title {
     grid-row: 1;
     grid-column: 1;
 }
 
-#contact_form #card_body {
+#contact_form .card_body {
     grid-row: 2;
     grid-column: 1;
 }
@@ -402,41 +335,22 @@ form {
     grid-column: 1;
 }
 
-label {
+.question {
+    font-weight: bold;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input {
+    margin-top: 5px;
     padding: 10px;
     font-style: italic;
 }
 
-input {
-    padding: 10px;
-}
-
 #contact_form {
     grid-row: 1;
-}
-
-#urgency_card {
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(9, auto);
-}
-
-.card #missions {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-}
-
-#card_title #missions {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column: 1;
-}
-
-#card_body #missions {
-    grid-row: 2;
-    grid-column: 1;
 }
 
 /*Skip to Main function*/
@@ -452,6 +366,7 @@ input {
     color: white;
 }
 
+/*Mission Gallery Elements*/
 .gallery {
     grid-row: 4;
     grid-column-start: 2;
@@ -460,20 +375,12 @@ input {
     margin: 0 auto;
     display: flex;
     flex-flow: column;
-    border: 2px solid #822325;
-    border-radius: 10px;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
     padding-bottom: 10px;
 }
-
-bold {
-    font-weight: 900;
-}
-
-
 
 .img_gal {
     width: 72vw;
@@ -481,167 +388,268 @@ bold {
     height: auto;
 }
 
-@media screen and (min-width:400px) {
-
-    .gallery>div {
-        border: 2px solid black;
-    }
-
-    /* REQUIREMENTS:
-    Change the background color of the body.
-    This is a quick check that your media query is correct.
-    */
-
-    body {
-        /*background-color: orange;*/
-    }
-
-    /* REQUIREMENTS:
-    Change the grid to two responsive fractional columns.*/
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* CHECKPOINT?
-    How tall are the rows?  Why?
-    Do the images take up their full row?
-    (If not, make your screen smaller but still
-    more than 778px.  How about now?) */
-
-    /* REQUIREMENTS
-    Uncomment the img selector values below.  */
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        margin: 5px;
-    }
-
-    img:hover {
-        opacity: .75;
-    }
-
-    header img:hover {
-        opacity: 1;
-    }
-
-    /*.img-three,.img-six,.img-nine, footer{
-        grid-column: 1/span 2;
-    }*/
-
-    /* REQUIREMENTS - Make sure the footer is
-    in the vertical center. */
-    footer {
-        align-self: center;
-    }
+.gallery>div {
+    border: 2px solid black;
 }
 
-@media screen and (min-width:778px) {
-
-    .gallery>div {
-        border: 2px solid black;
-    }
-
-    /* REQUIREMENTS:
-    Change the background color of the body.
-    This is a quick check that your media query is correct.
-    */
-
-    body {
-        /*background-color: orange;*/
-    }
-
-    /* REQUIREMENTS:
-    Change the grid to two responsive fractional columns.*/
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* CHECKPOINT?
-    How tall are the rows?  Why?
-    Do the images take up their full row?
-    (If not, make your screen smaller but still
-    more than 778px.  How about now?) */
-
-    /* REQUIREMENTS
-    Uncomment the img selector values below.  */
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-    }
-
-    .img-three,
-    .img-six,
-    .img-nine,
-    footer {
-        grid-column: 1/span 2;
-    }
-
-    /* REQUIREMENTS - Make sure the footer is
-    in the vertical center. */
-    footer {
-        align-self: center;
-    }
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-@media screen and (min-width:900px) {
+/*Image Elements*/
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /*margin: 5px;*/
+    opacity: 0.8;
+}
 
-    .gallery>div {
-        border: 2px solid black;
-    }
+img:hover {
+    opacity: 1;
+    transform: scale(1.01);
+    overflow: hidden;
+}
 
-    /* REQUIREMENTS:
-    Change the background color of the body.
-    This is a quick check that your media query is correct.
-    */
-
-    body {
-        /*background-color: orange;*/
-    }
-
-    /* REQUIREMENTS:
-    Change the grid to two responsive fractional columns.*/
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-
-    /* CHECKPOINT?
-    How tall are the rows?  Why?
-    Do the images take up their full row?
-    (If not, make your screen smaller but still
-    more than 778px.  How about now?) */
-
-    /* REQUIREMENTS
-    Uncomment the img selector values below.  */
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-    }
-
-    /*.img-three,.img-six,.img-nine, footer{
-        grid-column: 1/span 2;
-    }*/
-
-    /* REQUIREMENTS - Make sure the footer is
-    in the vertical center. */
-    footer {
-        align-self: center;
-    }
+header img:hover {
+    opacity: 1;
 }
 
 @media (prefers-reduced-motion) {
     .animation {
         animation: none;
     }
+
+    img {
+        transition: none;
+    }
+
+    img:hover {
+        transform: none;
+    }
+}
+
+/*Tablet Breakpoint*/
+@media (min-width: 480px) {
+    #logo {
+        width: 175px;
+    }
+    
+    .nav_links {
+        flex-direction: row;
+    }
+
+    .nav_item {
+        flex-direction: column;
+        font-size: large;
+    }
+
+    main {
+        grid-template-columns: auto auto;
+    }
+
+    .card_img {
+        width: 40vw;
+        max-height: 100%;
+        justify-self: center;
+        margin: 5px;
+        overflow: hidden;
+    }
+
+    /*Home Page*/
+    #home_team {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    #home_missions {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #home_contact {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #home_team .card_img {
+        width: 75vw;
+    }
+
+    /*Team Page*/
+    #team_all {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    #team_crofoot {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #team_iroh {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #team_kathra {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #team_lilwyvern {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    #team_silas {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    /*Mission Page*/
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .img_gal {
+        width: 250px;
+    }
+
+    /*Contact Page*/
+    #contact_form {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 1;
+    }
+    #urg_minor {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
+    }
+    #urg_major figcaption {
+        padding: 0 50px;
+    }
+    #urg_major {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 3;
+    }
+    #urg_critical {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 4;
+    }
+
+    /*Aside Element*/
+    aside {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .aside_icon {
+        width: 200px;
+    } 
+
+    /*Footer Element*/
+    footer {
+        padding-top: 20px;
+    }
+}
+
+/*Desktop Breakpoint*/
+@media (min-width: 770px) {
+    #logo {
+        width: 20vw;
+    }
+    
+    #logoname {
+        font-size: 10vw;
+    }
+
+    .nav_item {
+        flex-direction: row;
+        font-size: x-large;
+        margin: 0 10px;
+    }
+
+    main {
+        grid-template-columns: auto auto auto;
+    }
+
+    /*Home Page*/
+    #home_team {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #home_missions {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #home_contact {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #home_team .card_img {
+        width: 20vw;
+        height: auto;
+    }
+    #home_missions .card_img {
+        width: 20vw;
+        height: auto;
+    }
+    #home_contact .card_img {
+        width: 20vw;
+        height: auto;
+    }
+
+    /*Team Page*/
+    #team_all {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #team_crofoot {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    #team_iroh {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    #team_kathra {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #team_lilwyvern {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #team_silas {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .missions .card_img {
+        width: 20vw;
+    }
+
+    /*Contact Page*/
+    #contact_form {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    #urg_minor {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #urg_major {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #urg_critical {
+        grid-column: 3;
+        grid-row: 2;
+    }
+    .contact img {
+        width: 20vw;
+        height: auto;
+    }
+
+        /*Footer Element*/
+        footer {
+            padding-top: 50px;
+        }
+
 }
